@@ -1,10 +1,123 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Milena Papp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milena Papp — Psychoterapia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Witaj na stronie milenapapp.pl</h1>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="wordmark">Milena Papp</span>
+    <nav class="nav">
+      <a href="#o-mnie">O mnie</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Gabinet psychoterapii — Kraków</p>
+        <h1>Przestrzeń, w której<br>możesz zwolnić.</h1>
+        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.</p>
+        <a class="btn" href="#kontakt">Umów konsultację</a>
+      </div>
+      <div class="hero-photo" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="o-mnie" class="section">
+    <div class="wrap section-grid">
+      <h2>O mnie</h2>
+      <div class="section-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <ul class="credentials">
+          <li>Magister psychologii, Uniwersytet Jagielloński</li>
+          <li>Certyfikowana psychoterapeutka poznawczo-behawioralna</li>
+          <li>Ponad 8 lat praktyki klinicznej</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta" class="section section-alt">
+    <div class="wrap">
+      <h2>Oferta</h2>
+      <div class="offer-grid">
+        <article class="offer-card">
+          <h3>Terapia indywidualna</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+        </article>
+        <article class="offer-card">
+          <h3>Terapia par</h3>
+          <p>Ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation.</p>
+        </article>
+        <article class="offer-card">
+          <h3>Konsultacja wstępna</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Kontakt</h2>
+        <p class="section-body">Lorem ipsum dolor sit amet consectetur adipiscing elit. Napisz lub zadzwoń — odpowiadam w ciągu 1–2 dni roboczych.</p>
+        <dl class="contact-details">
+          <div>
+            <dt>E-mail</dt>
+            <dd>terapia@milenapapp.pl</dd>
+          </div>
+          <div>
+            <dt>Telefon</dt>
+            <dd>+48 123 456 789</dd>
+          </div>
+          <div>
+            <dt>Gabinet</dt>
+            <dd>ul. Przykładowa 12/3, 30-001 Kraków</dd>
+          </div>
+          <div>
+            <dt>Godziny</dt>
+            <dd>Pon–Pt, 9:00–18:00</dd>
+          </div>
+        </dl>
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Wiadomość</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Wyślij</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Milena Papp. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
 </body>
 </html>
