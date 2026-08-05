@@ -162,6 +162,26 @@ h1, h2, h3 {
   display: block;
 }
 
+.subsection {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.subsection h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.section-body .label {
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 28px 0 10px;
+}
+
 .credentials {
   margin: 24px 0 0;
   padding: 0;
