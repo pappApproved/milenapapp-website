@@ -346,6 +346,19 @@ h1, h2, h3 {
   .nav a {
     margin-left: 16px;
   }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .hero {
+    padding: 48px 0 64px;
+  }
+
+  .subsection {
+    margin-top: 32px;
+    padding-top: 32px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
