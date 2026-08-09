@@ -124,8 +124,8 @@ h1, h2, h3 {
 
 .hero-photo {
   position: relative;
-  aspect-ratio: 3 / 4;
-  background: var(--photo);
+  aspect-ratio: 2 / 3;
+  background: var(--photo) url('milena_photo.JPG') center/cover no-repeat;
   border-radius: 4px;
 }
 
