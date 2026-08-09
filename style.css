@@ -125,8 +125,20 @@ h1, h2, h3 {
 .hero-photo {
   position: relative;
   aspect-ratio: 2 / 3;
+  border-radius: 4px;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: var(--photo) url('milena_photo.JPG') center/cover no-repeat;
   border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.hero-photo:hover::before {
+  transform: scale(1.05);
 }
 
 .hero-photo::after {
@@ -136,6 +148,11 @@ h1, h2, h3 {
   border: 1px solid var(--accent);
   border-radius: 4px;
   z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.hero-photo:hover::after {
+  transform: scale(1.05);
 }
 
 /* Sections */
