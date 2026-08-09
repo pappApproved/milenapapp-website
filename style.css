@@ -287,41 +287,6 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.contact-form label {
-  font-size: 0.9rem;
-  color: var(--ink-soft);
-  margin-top: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  padding: 12px 14px;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  background: var(--bg);
-  color: var(--ink);
-  resize: vertical;
-}
-
-.contact-form input:focus-visible,
-.contact-form textarea:focus-visible {
-  outline: 2px solid var(--accent-deep);
-  outline-offset: 1px;
-}
-
-.contact-form .btn {
-  margin-top: 20px;
-  align-self: flex-start;
-}
-
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
