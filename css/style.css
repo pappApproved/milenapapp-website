@@ -399,6 +399,10 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
+.cal-container[hidden] {
+  display: none;
+}
+
 .cal-wrapper {
   border-radius: 8px;
   display: block;
@@ -438,6 +442,10 @@ h1, h2, h3 {
   border: 1px solid var(--border);
 }
 
+.cal-placeholder[hidden] {
+  display: none;
+}
+
 .cal-placeholder p {
   margin: 0;
   color: var(--ink-soft);
@@ -447,6 +455,10 @@ h1, h2, h3 {
 .cal-placeholder p:first-child {
   font-size: 1.3rem;
   margin-bottom: 8px;
+}
+
+.cal-placeholder .btn {
+  margin-top: 24px;
 }
 
 /* Footer */

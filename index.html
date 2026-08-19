@@ -109,7 +109,13 @@
         <button class="cal-switch-btn" data-calendar="consultation">Konsultacja telefoniczna</button>
       </div>
 
-      <div class="cal-container">
+      <div class="cal-placeholder" id="cal-consent">
+        <p>Kalendarz rezerwacji jest dostarczany przez zewnętrzny serwis Cal.com.</p>
+        <p>Kliknij poniżej, aby go załadować i wybrać termin.</p>
+        <button class="btn" id="cal-consent-btn" type="button">Pokaż kalendarz rezerwacji</button>
+      </div>
+
+      <div class="cal-container" id="cal-container" hidden>
         <div class="cal-wrapper active" id="cal-therapy">
           <div id="my-cal-inline-psychoterapia-indywidualna"></div>
         </div>

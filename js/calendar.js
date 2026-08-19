@@ -26,7 +26,7 @@
   };
 })(window, "https://app.cal.com/embed/embed.js", "init");
 
-document.addEventListener('DOMContentLoaded', function() {
+function loadCalWidgets() {
   Cal.config = Cal.config || {};
   Cal.config.forwardQueryParams = true;
 
@@ -89,4 +89,34 @@ document.addEventListener('DOMContentLoaded', function() {
     "hideEventTypeDetails":false,
     "layout":"month_view"
   });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const CONSENT_KEY = 'calConsentTimestamp';
+  const CONSENT_MAX_AGE_MS = 1000 * 60 * 60 * 24 * 30 * 6; // 6 miesięcy
+
+  const consentBlock = document.getElementById('cal-consent');
+  const consentBtn = document.getElementById('cal-consent-btn');
+  const calContainer = document.getElementById('cal-container');
+
+  function showCalendars() {
+    consentBlock.hidden = true;
+    calContainer.hidden = false;
+    loadCalWidgets();
+  }
+
+  function hasValidConsent() {
+    const savedAt = Number(localStorage.getItem(CONSENT_KEY));
+    return savedAt && (Date.now() - savedAt) < CONSENT_MAX_AGE_MS;
+  }
+
+  if (hasValidConsent()) {
+    showCalendars();
+    return;
+  }
+
+  consentBtn.addEventListener('click', function() {
+    localStorage.setItem(CONSENT_KEY, String(Date.now()));
+    showCalendars();
+  }, { once: true });
 });
