@@ -30,26 +30,32 @@ document.addEventListener('DOMContentLoaded', function() {
   Cal.config = Cal.config || {};
   Cal.config.forwardQueryParams = true;
 
+  const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const calTheme = isDark ? "dark" : "light";
+  const brandColor = isDark ? "#8FB088" : "#445540";
+
   Cal("init", "psychoterapia-indywidualna", {origin:"https://app.cal.com"});
 
   Cal.ns["psychoterapia-indywidualna"]("inline", {
     elementOrSelector:"#my-cal-inline-psychoterapia-indywidualna",
     config: {
       "layout":"month_view",
-      "useSlotsViewOnSmallScreen":"true"
+      "useSlotsViewOnSmallScreen":"true",
+      "theme": calTheme
     },
     calLink: "psychoterapia-milena-papp/psychoterapia-indywidualna",
     styles: {
       branding: {
-        brandColor: "#445540"
+        brandColor: brandColor
       }
     }
   });
 
   Cal.ns["psychoterapia-indywidualna"]("ui", {
+    "theme": calTheme,
     "styles": {
       "branding": {
-        "brandColor":"#445540"
+        "brandColor": brandColor
       }
     },
     "hideEventTypeDetails":false,
@@ -62,20 +68,22 @@ document.addEventListener('DOMContentLoaded', function() {
     elementOrSelector:"#my-cal-inline-pierwsza-bezpłatna-konsultacja",
     config: {
       "layout":"month_view",
-      "useSlotsViewOnSmallScreen":"true"
+      "useSlotsViewOnSmallScreen":"true",
+      "theme": calTheme
     },
     calLink: "psychoterapia-milena-papp/pierwsza-bezpłatna-konsultacja",
     styles: {
       branding: {
-        brandColor: "#445540"
+        brandColor: brandColor
       }
     }
   });
 
   Cal.ns["pierwsza-bezpłatna-konsultacja"]("ui", {
+    "theme": calTheme,
     "styles": {
       "branding": {
-        "brandColor":"#445540"
+        "brandColor": brandColor
       }
     },
     "hideEventTypeDetails":false,

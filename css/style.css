@@ -7,9 +7,24 @@
   --accent-deep: #445540;
   --photo: #8A6558;
   --border: #D4CFBC;
+  --btn-ink: #F6F4EC;
 
   --font-display: "Fraunces", serif;
   --font-body: "Inter", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1B1F1B;
+    --surface-alt: #242923;
+    --ink: #EDEAE0;
+    --ink-soft: #A8AFA3;
+    --accent: #C99C88;
+    --accent-deep: #8FB088;
+    --photo: #8A6558;
+    --border: #3A3F38;
+    --btn-ink: #1B1F1B;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -107,7 +122,7 @@ h1, h2, h3 {
 .btn {
   display: inline-block;
   background: var(--accent-deep);
-  color: #F6F4EC;
+  color: var(--btn-ink);
   text-decoration: none;
   padding: 13px 26px;
   border-radius: 4px;
@@ -370,7 +385,7 @@ h1, h2, h3 {
 .cal-switch-btn.active {
   background: var(--accent-deep);
   border-color: var(--accent-deep);
-  color: #F6F4EC;
+  color: var(--btn-ink);
 }
 
 .cal-switch-btn.active:hover {
