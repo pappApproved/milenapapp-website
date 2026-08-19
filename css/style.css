@@ -34,7 +34,7 @@ h1, h2, h3 {
 }
 
 .wrap {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -132,7 +132,7 @@ h1, h2, h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--photo) url('milena_photo.JPG') center/cover no-repeat;
+  background: var(--photo) url('../images/milena_photo.JPG') center/cover no-repeat;
   border-radius: 4px;
   transition: transform 0.3s ease;
 }
@@ -157,11 +157,18 @@ h1, h2, h3 {
 
 /* Sections */
 .section {
-  padding: 80px 0;
+  padding: 48px 0;
 }
 
 .section-alt {
   background: var(--surface-alt);
+}
+
+.section-divider {
+  border-top: 1px solid var(--border);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .section h2 {
@@ -316,6 +323,117 @@ h1, h2, h3 {
   border-radius: 4px;
 }
 
+/* Rezerwacja (Booking) */
+.pricing-info {
+  max-width: 62ch;
+  margin-bottom: 32px;
+}
+
+.pricing-info p {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.pricing-info strong {
+  color: var(--accent-deep);
+  font-weight: 600;
+}
+
+/* Calendar switcher */
+.cal-switcher {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.cal-switch-btn {
+  padding: 12px 24px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cal-switch-btn:hover {
+  background: var(--surface-alt);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.cal-switch-btn.active {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  color: #F6F4EC;
+}
+
+.cal-switch-btn.active:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* Calendar container */
+.cal-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cal-wrapper {
+  border-radius: 8px;
+  display: block;
+  overflow: hidden;
+}
+
+.cal-wrapper:not(.active) {
+  display: none;
+}
+
+.cal-wrapper.active {
+  display: block;
+}
+
+.cal-wrapper > div {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+
+.cal-wrapper iframe {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.cal-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 48px 24px;
+  text-align: center;
+  background: var(--surface-alt);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.cal-placeholder p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+}
+
+.cal-placeholder p:first-child {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
@@ -348,16 +466,29 @@ h1, h2, h3 {
   }
 
   .section {
-    padding: 48px 0;
+    padding: 32px 0;
   }
 
   .hero {
-    padding: 48px 0 64px;
+    padding: 40px 0 48px;
   }
 
   .subsection {
     margin-top: 32px;
     padding-top: 32px;
+  }
+
+  .pricing-info {
+    margin-bottom: 24px;
+  }
+
+  .cal-switcher {
+    margin-bottom: 24px;
+  }
+
+  .cal-switch-btn {
+    font-size: 0.9rem;
+    padding: 10px 18px;
   }
 }
 

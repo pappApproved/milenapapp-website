@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=optional" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=optional" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -18,6 +18,7 @@
     <nav class="nav">
       <a href="#o-mnie">O mnie</a>
       <a href="#w-czym-pomagam">W czym pomagam</a>
+      <a href="#rezerwacja">Rezerwacja</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </div>
@@ -31,7 +32,7 @@
         <p class="eyebrow">Gabinet psychoterapii — Kraków</p>
         <h1>Przestrzeń, w której<br>możesz zwolnić.</h1>
         <p class="lede">Cieszę się, że tu jesteś. Z prawdziwą ciekawością zatrzymuję się przy tym, co Cię tu dziś sprowadza i czego w tym momencie potrzebujesz. Niezależnie od tego, z jakim ciężarem, pytaniem czy kryzysem się teraz mierzysz – weź spokojny oddech i rozgość się. Jesteś w bezpiecznym miejscu.</p>
-        <a class="btn" href="#kontakt">Umów konsultację</a>
+        <a class="btn" href="#rezerwacja">Umów konsultację</a>
       </div>
       <div class="hero-photo" aria-hidden="true"></div>
     </div>
@@ -93,6 +94,36 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
+  <section id="rezerwacja" class="section">
+    <div class="wrap">
+      <h2>Rezerwacja i cennik</h2>
+      <div class="pricing-info">
+        <p>Sesja terapeutyczna trwa 50 minut i kosztuje <strong>180 zł</strong>.</p>
+        <p>Pierwsza konsultacja telefoniczna trwa 10 minut i jest <strong>bezpłatna</strong>.</p>
+        <p>Zapraszam Cię do skorzystania z kalendarza poniżej i umówienia konsultacji telefonicznej bądź sesji.</p>
+      </div>
+
+      <div class="cal-switcher">
+        <button class="cal-switch-btn active" data-calendar="therapy">Sesja terapeutyczna</button>
+        <button class="cal-switch-btn" data-calendar="consultation">Konsultacja telefoniczna</button>
+      </div>
+
+      <div class="cal-container">
+        <div class="cal-wrapper active" id="cal-therapy">
+          <div id="my-cal-inline-psychoterapia-indywidualna"></div>
+        </div>
+
+        <div class="cal-wrapper" id="cal-consultation">
+          <div id="my-cal-inline-pierwsza-bezpłatna-konsultacja"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <section id="kontakt" class="section">
     <div class="wrap">
       <h2>Kontakt</h2>
@@ -142,6 +173,9 @@
     <p>© 2026 Milena Papp. Wszelkie prawa zastrzeżone.</p>
   </div>
 </footer>
+
+<script src="js/calendar.js" defer></script>
+<script src="js/switcher.js" defer></script>
 
 </body>
 </html>
