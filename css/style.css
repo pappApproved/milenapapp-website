@@ -81,9 +81,14 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-.nav a:hover,
 .nav a:focus-visible {
   color: var(--accent-deep);
+}
+
+@media (hover: hover) {
+  .nav a:hover {
+    color: var(--accent-deep);
+  }
 }
 
 /* Hero */
@@ -132,9 +137,14 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.btn:hover,
 .btn:focus-visible {
   background: var(--ink);
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    background: var(--ink);
+  }
 }
 
 .hero-photo {
@@ -314,10 +324,16 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-.contact-details a:hover,
 .contact-details a:focus-visible {
   color: var(--accent-deep);
   text-decoration: underline;
+}
+
+@media (hover: hover) {
+  .contact-details a:hover {
+    color: var(--accent-deep);
+    text-decoration: underline;
+  }
 }
 
 .map-container {
@@ -376,10 +392,12 @@ h1, h2, h3 {
   transition: all 0.2s ease;
 }
 
-.cal-switch-btn:hover {
-  background: var(--surface-alt);
-  border-color: var(--accent);
-  color: var(--ink);
+@media (hover: hover) {
+  .cal-switch-btn:hover {
+    background: var(--surface-alt);
+    border-color: var(--accent);
+    color: var(--ink);
+  }
 }
 
 .cal-switch-btn.active {
@@ -388,9 +406,11 @@ h1, h2, h3 {
   color: var(--btn-ink);
 }
 
-.cal-switch-btn.active:hover {
-  background: var(--ink);
-  border-color: var(--ink);
+@media (hover: hover) {
+  .cal-switch-btn.active:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
 }
 
 /* Calendar container */
