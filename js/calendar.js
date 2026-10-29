@@ -62,6 +62,34 @@ function loadCalWidgets() {
     "layout":"month_view"
   });
 
+  Cal("init", "psychoterapia-indywidualna-online", {origin:"https://app.cal.com"});
+
+  Cal.ns["psychoterapia-indywidualna-online"]("inline", {
+    elementOrSelector:"#my-cal-inline-psychoterapia-indywidualna-online",
+    config: {
+      "layout":"month_view",
+      "useSlotsViewOnSmallScreen":"true",
+      "theme": calTheme
+    },
+    calLink: "psychoterapia-milena-papp/psychoterapia-indywidualna-online",
+    styles: {
+      branding: {
+        brandColor: brandColor
+      }
+    }
+  });
+
+  Cal.ns["psychoterapia-indywidualna-online"]("ui", {
+    "theme": calTheme,
+    "styles": {
+      "branding": {
+        "brandColor": brandColor
+      }
+    },
+    "hideEventTypeDetails":false,
+    "layout":"month_view"
+  });
+
   Cal("init", "pierwsza-bezpłatna-konsultacja", {origin:"https://app.cal.com"});
 
   Cal.ns["pierwsza-bezpłatna-konsultacja"]("inline", {
